@@ -119,6 +119,8 @@ h6 {
   padding-left: 12px;
   position: relative;
   font-weight: 500;
+  margin-top: 24px;
+  position: relative;
 }
 .title::before {
   content: "";
@@ -177,7 +179,7 @@ body {
   .header_center,
   .header__divider--two,
   .header__divider.header__divider--three,
-  .header__right_one,
+  .header__right-one,
   .header__right-two,
   .text-block__paragraph {
     display: none;
