@@ -175,10 +175,10 @@ body {
     gap: 16px;
   }
   .header_center,
-  .tire_two,
-  .tire_tree,
+  .header__divider--two,
+  .header__divider.header__divider--three,
   .header__right_one,
-  .header__right_two,
+  .header__right-two,
   .text-block__paragraph {
     display: none;
   }
@@ -195,7 +195,7 @@ body {
 .title {
   margin-bottom: 16px;
 }
-.tire {
+.header__divider--tire {
   width: 2px;
   height: 32px;
   border-radius: 1px;
@@ -206,10 +206,10 @@ body {
   display: none;
 }
 
-.hsection-services__tab {
+.section-services__tab {
   margin-right: 16px;
 }
-.section-services__tab_active {
+.section-services__tab.section-services__tab--active {
   border: 2px solid #b8ffec;
   border-radius: 6px;
   padding: 8px 16px;
@@ -218,9 +218,9 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 1120px) {
-  .tire,
-  .header__right_one,
-  .header__right_two {
+  .header__divider--tire,
+  .header__right-one,
+  .header__right-two {
     display: none;
   }
   .header {
@@ -242,14 +242,14 @@ body {
   .right-group {
     display: flex;
   }
-  .tire_two {
+  .header__divider--two {
     width: 2px;
     height: 32px;
     border-radius: 1px;
     background-color: #eaeaea;
     margin: 0 20px 0 20px;
   }
-  .tire_tree {
+  .header__divider.header__divider--three {
     width: 2px;
     height: 32px;
     border-radius: 1px;
@@ -267,6 +267,9 @@ body {
   .text-block-block {
     width: 312px;
   }
+  .text-block__paragraph {
+    padding-top: 30px;
+  }
 }
 
 @media (min-width: 1120px) {
@@ -277,29 +280,26 @@ body {
     position: relative;
     width: max-content;
   }
-  .header__right_one,
-  .header__right_two {
+  .header__right-one,
+  .header__right-two {
     font-size: 16px;
     font-weight: 500;
   }
   .text {
     display: flex;
   }
-  /* .read {
-    display: flex;
-  } */
+
   .header__left,
-  .tire,
+  .header__divider--tire,
   .header_center {
     display: none;
   }
-  .div_header {
+  .page-header {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
   }
   .title {
-    /* justify-content: center; */
     margin-top: 42px;
   }
   .right-group {
