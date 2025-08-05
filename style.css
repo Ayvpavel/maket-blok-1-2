@@ -1,7 +1,7 @@
 @font-face {
   font-family: "TTL";
 
-  src: url("fonts/TTLakesBlack.woff");
+  src: url("./fonts/TTLakesBlack.woff");
 }
 @font-face {
   font-family: "TTLa";
@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "TTLreg";
-  src: url("/fonts/TTLakesRegular.woff");
+  src: url("./fonts/TTLakesRegular.woff");
 }
 * {
   padding: 0;
