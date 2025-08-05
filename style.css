@@ -194,7 +194,7 @@ body {
     margin-left: 16px;
   }
 
-  .header_center,
+  .header__center,
   .header__divider--two,
   .header__divider.header__divider--three,
   .header__right-one,
@@ -206,7 +206,7 @@ body {
     display: flex;
     gap: 16px;
   }
-  .right-group {
+  .header__right-group {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -241,7 +241,7 @@ body {
   .text-block__hidden-text {
     display: none;
   }
-  .header_center {
+  .header__center {
     display: flex;
     gap: 16px;
   }
@@ -269,7 +269,7 @@ body {
     font-size: 16px;
     font-weight: 500;
   }
-  .right-group {
+  .header__right-group {
     display: flex;
     gap: 20px;
   }
@@ -328,7 +328,7 @@ body {
 
   .header__left,
   .header__divider--tire,
-  .header_center {
+  .header__center {
     display: none;
   }
   .page-header {
@@ -339,7 +339,7 @@ body {
   .title {
     margin-top: 42px;
   }
-  .right-group {
+  .header__right-group {
     margin-left: auto;
   }
   .header__right {
