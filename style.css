@@ -483,3 +483,7 @@ button:hover {
 ul li:first-child p {
   color: #7e7e82;
 }
+
+.mobile-menu__lang a:first-child {
+  color: #7e7e82;
+}
