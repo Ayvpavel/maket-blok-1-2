@@ -442,9 +442,7 @@ body {
   display: flex;
   gap: 7px;
 }
-.mobile-menu__lang a:first-child {
-  color: #7e7e82;
-}
+
 .mobile-menu__lang a {
   padding-top: 40px;
   font-family: "TT Lakes";
@@ -480,4 +478,8 @@ button:hover {
   bottom: 2px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+
+ul li:first-child p {
+  color: #7e7e82;
 }
