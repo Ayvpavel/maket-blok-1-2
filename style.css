@@ -93,8 +93,9 @@ h6 {
   font-weight: 400;
 }
 .content {
-  margin: 0 auto;
-  max-width: 1120px;
+  /* margin: 0 auto;
+  max-width: 1120px; */
+  width: 100%;
 }
 .header__menu,
 .header__search,
@@ -307,6 +308,10 @@ body {
 }
 
 @media (min-width: 1120px) {
+  .hero__banner {
+    height: 307px;
+    width: 531px;
+  }
   .header {
     display: flex;
     justify-content: space-between;
@@ -378,6 +383,7 @@ body {
 
 .page {
   display: flex;
+  min-height: 100%;
 }
 
 .mobile {
