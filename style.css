@@ -99,7 +99,8 @@ h6 {
 }
 .header__menu,
 .header__search,
-.header__settings {
+.header__settings,
+.header__center-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -332,9 +333,6 @@ body {
   .text-block {
     display: flex;
     flex-direction: column;
-  }
-  .hero__banner {
-    height: 307px;
   }
 }
 
