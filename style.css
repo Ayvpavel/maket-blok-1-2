@@ -136,7 +136,7 @@ h6 {
   padding-left: 12px;
   position: relative;
   font-weight: 500;
-  margin-top: 24px;
+  /* margin-top: 24px; */
   position: relative;
 }
 .title::before {
@@ -177,7 +177,12 @@ body {
 }
 
 @media (max-width: 768px) {
-  .NEW {
+  .header__container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .header__bottom {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -209,7 +214,8 @@ body {
   .header__divider.header__divider--three,
   .header__right-one,
   .header__right-two,
-  .text-block__paragraph {
+  .text-block__paragraph,
+  .header__right-mod {
     display: none;
   }
   .header__right {
@@ -248,10 +254,16 @@ body {
   .header__divider--tire,
   .header__right-one,
   .header__right-two,
-  .text-block__hidden-text {
+  .text-block__hidden-text,
+  .header__right-mod {
     display: none;
   }
-  .NEW {
+  .header__container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .header__bottom {
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -317,24 +329,33 @@ body {
   .text-block__paragraph {
     padding-top: 30px;
   }
-}
-
-@media (min-width: 1120px) {
-  .NEW{
+  .text-block {
     display: flex;
-flex-direction: column;
-gap: 16px;
+    flex-direction: column;
   }
   .hero__banner {
     height: 307px;
-    width: 531px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .header__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .hero__banner {
+    height: 307px;
+    width: 50%;
+    padding-right: 37px;
   }
   .header {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
     padding: 24px 32px;
     position: relative;
-    width: 100%;
+    width: 100%; */
+    display: none;
   }
   .header__right-one {
     font-size: 16px;
@@ -348,11 +369,13 @@ gap: 16px;
   }
   .text {
     display: flex;
+    justify-content: space-between;
+    padding-top: 42px;
+    padding-right: 37px;
   }
 
   .header__left,
-  .header__divider--tire,
-  .header__center {
+  .header__divider--tire {
     display: none;
   }
   .foo {
@@ -369,7 +392,7 @@ gap: 16px;
   .header__right-group {
     margin-left: auto;
   }
-  .header__right {
+  .header__right-mod {
     display: flex;
     align-items: center;
     gap: 9px;
@@ -382,7 +405,7 @@ gap: 16px;
     padding: 16px 0px 0 34px;
   }
   .text-block-block {
-    width: 490px;
+    width: 50%;
   }
 
   .text-block__paragraph {
