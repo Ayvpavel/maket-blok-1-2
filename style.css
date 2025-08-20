@@ -535,6 +535,6 @@ ul li:first-child p {
     display: flex;
     flex-wrap: wrap;
 
-    margin-left: 16px;
+    padding-left: 16px;
   }
 }
