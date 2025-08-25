@@ -91,12 +91,12 @@ h5,
 h6 {
   font-weight: 400;
 }
-.brands__arrow {
+/* .brands__arrow {
   width: 40px;
   height: 40px;
   border: 2px solid #ff3e79;
   border-radius: 50%;
-}
+} */
 
 .content {
   width: 100%;
@@ -314,6 +314,30 @@ ul li:first-child p {
 }
 
 @media (max-width: 768px) {
+  .brands {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .swiper {
+    max-width: 240px;
+    padding-bottom: 20px;
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+
+  .brands__arrow {
+    margin-left: 10px;
+  }
+
   .text-block-block {
     display: flex;
     flex-direction: column;
@@ -376,6 +400,17 @@ ul li:first-child p {
     justify-content: center;
     gap: 20px;
   }
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    width: 240px;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    background-color: #ffffff;
+    padding: 16px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1120px) {
@@ -385,6 +420,23 @@ ul li:first-child p {
   .text-block__hidden-text,
   .header__right-mod {
     display: none;
+  }
+  .swiper-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    width: 240px;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    background-color: #ffffff;
+    padding: 16px;
   }
   .header__container {
     display: flex;
@@ -565,26 +617,22 @@ ul li:first-child p {
     font-size: 16px;
     font-weight: 400;
   }
-  .brands__list {
+  .swiper-slide {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 60px;
+    justify-content: space-between;
     height: 72px;
     width: 240px;
     border: 1px solid #eaeaea;
     border-radius: 6px;
     background-color: #ffffff;
+    padding: 16px;
   }
-  
-  #brands__icon {
-    width: 108px;
-    height: 32px;
-  }
-  .grid{
-    display: grid;
+
+  .swiper-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 32px;
-     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  padding: 10px;
   }
 }
