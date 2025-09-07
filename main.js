@@ -5,9 +5,7 @@ const icon = document.querySelector(".gallery-icon");
 let isExpanded = false;
 let swiper = null;
 
-button.addEventListener("click", function () {
-  console.log("Кнопка нажата");
-});
+button.addEventListener("click", function () {});
 
 function initSwiper() {
   if (window.innerWidth <= 768 && !swiper) {
@@ -28,15 +26,16 @@ function initSwiper() {
 function getVisibleCount() {
   const width = window.innerWidth;
   if (width < 768) return items.length;
-  if (width < 1135) return 4;
-  if (width < 1437) return 6;
-  return 8;
+  const containerWidth = container.offsetWidth;
+  const itemsWidth = items[0].offsetWidth;
+  const countItems = Math.trunc(containerWidth / (itemsWidth + 20));
+
+  return countItems * 2;
 }
 window.addEventListener("resize", start);
 
 function start() {
-  let count = getVisibleCount();
-  console.log(count);
+  getVisibleCount();
 }
 
 function updateVisibility() {
