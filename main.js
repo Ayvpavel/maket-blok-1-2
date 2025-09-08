@@ -28,7 +28,7 @@ function getVisibleCount() {
   if (width < 768) return items.length;
   const containerWidth = container.offsetWidth;
   const itemsWidth = items[0].offsetWidth;
-  const countItems = Math.trunc(containerWidth / (itemsWidth + 20));
+  const countItems = Math.trunc(containerWidth / (itemsWidth + 25));
 
   return countItems * 2;
 }
@@ -72,5 +72,3 @@ window.addEventListener("load", () => {
 window.addEventListener("resize", () => {
   updateVisibility();
 });
-
-
