@@ -321,6 +321,13 @@ ul li:first-child p {
   font-size: 16px;
 }
 @media (max-width: 768px) {
+  h2 {
+    font-size: 16px;
+    font-family: "TT Lakes";
+    color: #7e7e82;
+    margin-left: 16px;
+    margin-top: 15px;
+  }
   .gallery {
     display: none;
   }
@@ -443,6 +450,20 @@ ul li:first-child p {
   .text-block__hidden-text,
   .header__right-mod {
     display: none;
+  }
+  h2 {
+    font-family: "TT Lakes";
+    font-size: 16px;
+    color: #7e7e82;
+  }
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+  .brands {
+    margin-left: 24px;
   }
   .swiper-wrapper {
     display: flex;
