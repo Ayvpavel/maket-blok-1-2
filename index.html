@@ -13,6 +13,7 @@
   </head>
   <body>
     <div class="page">
+      -
       <div class="mobile">
         <div class="mobile-menu__inner">
           <header class="mobile-menu">
@@ -149,7 +150,7 @@
                   очередь, советуют нас родным и близким.</span
                 >
               </p>
-              
+
               <div class="read-more">
                 <img class="icon" src="img/icon.png" alt="" />
                 <p class="read">Читать далее</p>
@@ -240,8 +241,60 @@
           </div>
         </section>
       </main>
+      
+      <div class="feedback-menu">
+        <h2 class="feedback__title">Обратная связь</h2>
+        <form class="feedback__form" action="#" method="post">
+          <div class="feedback__field">
+            <input
+              class="feedback__input"
+              type="text"
+              name="name"
+              placeholder="Имя"
+              required
+            />
+          </div>
+          <div class="feedback__field">
+            <input
+              class="feedback__input"
+              type="tel"
+              name="phone"
+              placeholder="Телефон"
+              required
+            />
+          </div>
+          <div class="feedback__field">
+            <input
+              class="feedback__input"
+              type="email"
+              name="email"
+              placeholder="Электронная почта"
+              required
+            />
+          </div>
+          <div class="feedback__field">
+            <textarea
+              class="feedback__textarea"
+              name="message"
+              placeholder="Сообщение"
+              required
+            ></textarea>
+          </div>
+          <p class="feedback__note">
+            Нажимая «отправить», вы даёте согласие на
+            <span class="feedback__highlight">
+              обработку персональных данных</span
+            >
+            и соглашаетесь с нашей
+            <span class="feedback__highlight">
+              политикой конфиденциальности</span
+            >
+          </p>
+          <button class="feedback__button" type="submit">Отправить</button>
+        </form>
+      </div>
     </div>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
   </body>

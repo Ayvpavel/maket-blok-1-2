@@ -3,23 +3,32 @@ const container = document.querySelector(".swiper-wrapper");
 const items = container.querySelectorAll(".swiper-slide");
 const icon = document.querySelector(".gallery-icon");
 let isExpanded = false;
-let swiper = null;
 
-button.addEventListener("click", function () {});
+// button.addEventListener("click", function () {});
+
+let swiperElement = null;
 
 function initSwiper() {
-  if (window.innerWidth <= 768 && !swiper) {
-    swiper = new Swiper(".swiper", {
-      slidesPerView: 1,
+  const swiperEl = document.querySelector(".swiper");
+
+  if (!swiperEl) return;
+
+  if (window.innerWidth < 768 && !swiperElement) {
+    swiperElement = new Swiper(swiperEl, {
+      direction: "horizontal",
+      loop: true,
+      speed: 300,
+      slidesPerView: "auto",
       spaceBetween: 16,
+      centeredSlides: false,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
       },
     });
-  } else if (window.innerWidth > 900 && swiper) {
-    swiper.destroy(true, true);
-    swiper = null;
+  } else if (window.innerWidth >= 768 && swiperElement) {
+    swiperElement.destroy(true, true);
+    swiperElement = null;
   }
 }
 
@@ -39,7 +48,7 @@ function start() {
 }
 
 function updateVisibility() {
-  if (swiper) return;
+  if (swiperElement) return;
   const count = getVisibleCount();
   for (let index = 0; index < items.length; index++) {
     const item = items[index];
@@ -64,11 +73,12 @@ button.addEventListener("click", function () {
   updateVisibility();
 });
 
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
   updateVisibility();
   initSwiper();
 });
 
 window.addEventListener("resize", () => {
   updateVisibility();
+  initSwiper();
 });

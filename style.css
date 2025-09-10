@@ -320,6 +320,46 @@ ul li:first-child p {
   font-family: "TT Lakes";
   font-size: 16px;
 }
+.feedback-menu {
+  width: 440px;
+  background-color: #ffffff;
+}
+.feedback__title {
+  color: #1b1c21;
+  font-size: 24px;
+  font-family: "TT Lakes";
+  margin: 40px 32px;
+}
+.feedback__field {
+  margin-top: 16px;
+  margin-left: 30px;
+  border: 1px solid #eaeaea;
+  height: 48px;
+  border-radius: 8px;
+  
+}
+  .feedback__input,
+.feedback__textarea {
+  padding-left: 20px;   /* сдвиг текста вправо */
+  padding-top: 15px;    /* сдвиг текста вниз */
+}
+.feedback__note{
+  padding-top: 16px;
+  font-size: 14px;
+}
+.feedback__highlight{
+  font-size: 16px;
+  color: #FF3E79;
+}
+.feedback__textarea {
+  width: 376px;      /* ширина поля */
+  height: 118px;    /* высота поля, можно увеличить */
+  padding: 10px;    /* внутренние отступы */
+  font-size: 14px;  /* размер текста */
+  border-radius: 8px; /* скругление углов */
+  border: 1px solid #ccc; /* рамка */
+  resize: vertical;}
+
 @media (max-width: 768px) {
   h2 {
     font-size: 16px;
@@ -337,7 +377,7 @@ ul li:first-child p {
   }
 
   .swiper {
-    max-width: 240px;
+    width: 100%;
     padding-bottom: 20px;
   }
   .swiper-pagination {
@@ -357,6 +397,7 @@ ul li:first-child p {
     align-items: center;
     height: 72px;
     padding: 16px 20px;
+    width: 240px;
 
     gap: 16px;
     background: #fff;
