@@ -381,6 +381,10 @@ ul li:first-child p {
 }
 
 @media (max-width: 768px) {
+
+  .hidden {
+  display: none;
+}
   .mobile {
     display: none;
   }
@@ -389,6 +393,9 @@ ul li:first-child p {
   }
   .feedback-menu {
     display: none;
+  }
+  .feedback-menu.active {
+    display: block;
   }
   h2 {
     font-size: 16px;
@@ -650,7 +657,8 @@ ul li:first-child p {
     width: 50%;
   }
 
-  .header {
+  .header,
+  .btn-close {
     display: none;
   }
   .header__right-one {
@@ -750,5 +758,8 @@ ul li:first-child p {
     flex-direction: row;
     align-items: center;
     gap: 8px;
+  }
+  .mobile-menu > :nth-child(2) {
+    padding-left: 0px;
   }
 }

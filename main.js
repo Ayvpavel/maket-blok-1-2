@@ -8,6 +8,7 @@ const feedbackMenu = document.querySelector(".feedback-menu");
 const openheaderMenuBtn = document.querySelector(".header__menu");
 const closeBtnClose = document.querySelector(".btn-close");
 const mobileMenu = document.querySelector(".mobile");
+const mobileContent = document.querySelector(".content");
 let isExpanded = false;
 
 // button.addEventListener("click", function () {});
@@ -97,6 +98,17 @@ console.log(openFeedbackBtn);
 
 openheaderMenuBtn.addEventListener("click", () => {
   mobileMenu.classList.add("active");
+
+  if (window.innerWidth < 768) {
+    mobileContent.classList.add("hidden");
+  }
+});
+
+openFeedbackBtn.addEventListener("click", () => {
+  if (mobileMenu.classList.contains("active")) {
+    mobileMenu.classList.remove("active");
+    mobileContent.classList.add("hidden");
+  }
 });
 
 closeBtnClose.addEventListener("click", () => {
