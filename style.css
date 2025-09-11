@@ -278,12 +278,12 @@ body {
 }
 
 .mobile-foot {
-  padding-top: 268px;
   display: flex;
   flex-direction: column;
   padding-left: 24px;
-  padding-top: 268px;
   gap: 16px;
+  position: fixed;
+  bottom: 0;
 }
 button {
   transition: 1s ease;
@@ -381,10 +381,9 @@ ul li:first-child p {
 }
 
 @media (max-width: 768px) {
-
   .hidden {
-  display: none;
-}
+    display: none;
+  }
   .mobile {
     display: none;
   }
