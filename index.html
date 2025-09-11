@@ -17,7 +17,7 @@
       <div class="mobile">
         <div class="mobile-menu__inner">
           <header class="mobile-menu">
-            <button class="mobile-menu__header" href="#">
+            <button class="mobile-menu__header btn-close" href="#">
               <img src="IMG2/icon.png" alt="Закрыть меню" />
             </button>
             <img src="img/Group.png" alt="иконка" />
@@ -38,7 +38,7 @@
         </div>
         <footer class="mobile-foot">
           <div class="footer-icon">
-            <button class="mobile-menu__header" href="#">
+            <button class="mobile-menu__header phone" href="#">
               <img src="IMG2/icon2.png" alt="Позвонить" />
             </button>
             <button class="mobile-menu__header" href="#">
@@ -60,9 +60,10 @@
           <div class="header__container">
             <header class="header">
               <div class="header__left">
-                <a class="header__menu" href="#">
+                <button class="header__menu">
                   <img src="IMG2/icon0.png" alt="" />
-                </a>
+                </button>
+
                 <div class="header__divider header__divider--two"></div>
                 <div class="header__icon" href="#">
                   <img src="img/Group.png" alt="" />
@@ -241,7 +242,7 @@
           </div>
         </section>
       </main>
-      
+
       <div class="feedback-menu">
         <h2 class="feedback__title">Обратная связь</h2>
         <form class="feedback__form" action="#" method="post">
@@ -280,17 +281,22 @@
               required
             ></textarea>
           </div>
-          <p class="feedback__note">
-            Нажимая «отправить», вы даёте согласие на
-            <span class="feedback__highlight">
-              обработку персональных данных</span
-            >
-            и соглашаетесь с нашей
-            <span class="feedback__highlight">
-              политикой конфиденциальности</span
-            >
-          </p>
-          <button class="feedback__button" type="submit">Отправить</button>
+
+          <div>
+            <p class="feedback__note">
+              Нажимая «отправить», вы даёте согласие на
+              <span class="feedback__highlight">
+                обработку персональных данных</span
+              >
+              и соглашаетесь с нашей
+              <span class="feedback__highlight">
+                политикой конфиденциальности</span
+              >
+            </p>
+            <button class="feedback__button" type="submit">
+              <img src="IMG2/отправить.png" alt="" />
+            </button>
+          </div>
         </form>
       </div>
     </div>

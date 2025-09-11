@@ -2,6 +2,12 @@ const button = document.querySelector(".gallery__show-all");
 const container = document.querySelector(".swiper-wrapper");
 const items = container.querySelectorAll(".swiper-slide");
 const icon = document.querySelector(".gallery-icon");
+const openFeedbackBtn = document.querySelector(".phone");
+const closeFeedbackBtn = document.querySelector(".close-feedback");
+const feedbackMenu = document.querySelector(".feedback-menu");
+const openheaderMenuBtn = document.querySelector(".header__menu");
+const closeBtnClose = document.querySelector(".btn-close");
+const mobileMenu = document.querySelector(".mobile");
 let isExpanded = false;
 
 // button.addEventListener("click", function () {});
@@ -81,4 +87,18 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("resize", () => {
   updateVisibility();
   initSwiper();
+});
+
+openFeedbackBtn.addEventListener("click", () => {
+  console.log("click");
+  feedbackMenu.classList.add("active");
+});
+console.log(openFeedbackBtn);
+
+openheaderMenuBtn.addEventListener("click", () => {
+  mobileMenu.classList.add("active");
+});
+
+closeBtnClose.addEventListener("click", () => {
+  mobileMenu.classList.remove("active");
 });

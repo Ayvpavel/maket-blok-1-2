@@ -321,51 +321,79 @@ ul li:first-child p {
   font-size: 16px;
 }
 .feedback-menu {
-  width: 440px;
   background-color: #ffffff;
+  padding-left: 32px;
+  min-width: 440px;
+  max-width: 440px;
 }
 .feedback__title {
   color: #1b1c21;
   font-size: 24px;
   font-family: "TT Lakes";
-  margin: 40px 32px;
+  margin: 40px 0 24px 0;
+  font-weight: 700;
 }
 .feedback__field {
   margin-top: 16px;
-  margin-left: 30px;
+
   border: 1px solid #eaeaea;
   height: 48px;
+  width: 348px;
   border-radius: 8px;
-  
 }
-  .feedback__input,
+
+.feedback__input,
 .feedback__textarea {
-  padding-left: 20px;   /* сдвиг текста вправо */
-  padding-top: 15px;    /* сдвиг текста вниз */
+  padding-left: 20px;
+  width: 100%;
+  height: 100%;
 }
-.feedback__note{
+.feedback__textarea {
+  min-height: 30px;
+}
+.feedback__button {
+  padding-top: 23px;
+  padding-left: 224px;
+}
+.feedback__note {
   padding-top: 16px;
   font-size: 14px;
+  color: #7e7e82;
+  width: 360px;
 }
-.feedback__highlight{
+.feedback__highlight {
   font-size: 16px;
-  color: #FF3E79;
+  color: #ff3e79;
 }
-.feedback__textarea {
-  width: 376px;      /* ширина поля */
-  height: 118px;    /* высота поля, можно увеличить */
-  padding: 10px;    /* внутренние отступы */
-  font-size: 14px;  /* размер текста */
-  border-radius: 8px; /* скругление углов */
-  border: 1px solid #ccc; /* рамка */
-  resize: vertical;}
+.feedback__title {
+  position: relative;
+}
+.feedback__title::before {
+  content: "";
+  height: 40px;
+  width: 3px;
+  background-color: #41f6d7;
+  position: absolute;
+  left: -32px;
+  border-radius: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 @media (max-width: 768px) {
+  .mobile {
+    display: none;
+  }
+  .mobile.active {
+    display: block;
+  }
+  .feedback-menu {
+    display: none;
+  }
   h2 {
     font-size: 16px;
     font-family: "TT Lakes";
     color: #7e7e82;
-    margin-left: 16px;
     margin-top: 15px;
   }
   .gallery {
@@ -374,6 +402,7 @@ ul li:first-child p {
   .brands {
     max-width: 768px;
     margin: 0 auto;
+    padding-left: 24px;
   }
 
   .swiper {
@@ -471,17 +500,6 @@ ul li:first-child p {
     justify-content: center;
     gap: 20px;
   }
-  /* .swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 72px;
-    width: 240px;
-    border: 1px solid #eaeaea;
-    border-radius: 6px;
-    background-color: #ffffff;
-    padding: 16px;
-  } */
 }
 
 @media (min-width: 768px) and (max-width: 1120px) {
@@ -612,6 +630,13 @@ ul li:first-child p {
 }
 
 @media (min-width: 1120px) {
+  .feedback-menu {
+    display: none;
+  }
+  .feedback-menu.active {
+    display: block;
+  }
+
   .content {
     padding-right: 29px;
   }
