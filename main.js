@@ -3,12 +3,17 @@ const container = document.querySelector(".swiper-wrapper");
 const items = container.querySelectorAll(".swiper-slide");
 const icon = document.querySelector(".gallery-icon");
 const openFeedbackBtn = document.querySelector(".phone");
-const closeFeedbackBtn = document.querySelector(".close-feedback");
-const feedbackMenu = document.querySelector(".feedback-menu");
 const openheaderMenuBtn = document.querySelector(".header__menu");
+const oppenMessageBtn = document.querySelector(".message");
 const closeBtnClose = document.querySelector(".btn-close");
+const closeFeedbackBtn = document.querySelector(".close-feedback");
+const callbackCloseBtn = document.querySelector(".callback__close");
+const feedbackCloseBtn = document.querySelector("feedback__close");
+const feedbackMenu = document.querySelector(".feedback-menu");
 const mobileMenu = document.querySelector(".mobile");
 const mobileContent = document.querySelector(".content");
+const callbackMenu = document.querySelector(".callback");
+const mobileActiveHidden = document.querySelector(".mobile active");
 let isExpanded = false;
 
 // button.addEventListener("click", function () {});
@@ -90,27 +95,75 @@ window.addEventListener("resize", () => {
   initSwiper();
 });
 
-openFeedbackBtn.addEventListener("click", () => {
+oppenMessageBtn.addEventListener("click", () => {
   console.log("click");
-  feedbackMenu.classList.add("active");
+  callbackMenu.classList.add("active");
+  mobileContent.classList.add("hidden");
+  mobileMenu.classList.add("hidden");
 });
-console.log(openFeedbackBtn);
 
 openheaderMenuBtn.addEventListener("click", () => {
   mobileMenu.classList.add("active");
 
-  if (window.innerWidth < 768) {
-    mobileContent.classList.add("hidden");
-  }
+  mobileContent.classList.add("hidden");
 });
 
-openFeedbackBtn.addEventListener("click", () => {
+oppenMessageBtn.addEventListener("click", () => {
   if (mobileMenu.classList.contains("active")) {
-    mobileMenu.classList.remove("active");
+    mobileMenu.classList.add("hidden");
     mobileContent.classList.add("hidden");
   }
 });
 
 closeBtnClose.addEventListener("click", () => {
   mobileMenu.classList.remove("active");
+  mobileContent.classList.add("active");
 });
+
+openFeedbackBtn.addEventListener("click", () => {
+  callbackMenu.classList.add("active");
+  mobileContent.classList.add("hidden");
+  mobileMenu.classList.add("hidden");
+  // mobileActive.classList.add("hidden");
+});
+
+callbackCloseBtn.addEventListener("click", () => {
+  callbackMenu.classList.remove("active");
+  mobileMenu.classList.remove("hidden");
+  mobileContent.classList.remove("hidden");
+});
+
+feedbackCloseBtn.addEventListener("click", () => {
+  // callbackMenu.classList.remove("active");
+  // mobileMenu.classList.remove("hidden");
+  // mobileContent.classList.remove("hidden");
+  mobileMenu.classList.add("hidden");
+});
+
+// if (window.innerWidth < 768) {
+//   // Открыть мобильное меню
+//   openheaderMenuBtn.addEventListener("click", () => {
+//     mobileMenu.classList.add("active");
+//     mobileContent.classList.add("hidden");
+//   });
+
+//   // Если нажата кнопка обратной связи
+//   openFeedbackBtn.addEventListener("click", () => {
+//     mobileMenu.classList.remove("active");
+//     mobileContent.classList.add("hidden");
+//     feedbackMenu.classList.add("active");
+//   });
+
+//   // Если нажата кнопка "Заказать звонок"
+//   oppenMessageBtn.addEventListener("click", () => {
+//     mobileMenu.classList.remove("active");
+//     mobileContent.classList.add("hidden");
+//     callbackMenu.classList.add("active");
+//   });
+//   feedbackCloseBtn.addEventListener("click", () => {
+//     feedbackMenu.classList.remove("active");
+//     callbackMenu.classList.remove("active");
+//     mobileMenu.classList.remove("active");
+//     mobileContent.classList.remove("hidden");
+//   });
+// }

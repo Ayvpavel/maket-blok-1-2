@@ -13,7 +13,6 @@
   </head>
   <body>
     <div class="page">
-      
       <div class="mobile">
         <div class="mobile-menu__inner">
           <header class="mobile-menu">
@@ -41,7 +40,7 @@
             <button class="mobile-menu__header phone" href="#">
               <img src="IMG2/icon2.png" alt="Позвонить" />
             </button>
-            <button class="mobile-menu__header" href="#">
+            <button class="mobile-menu__header message" href="#">
               <img src="IMG2/icon5.png" alt="Написать сообщение" />
             </button>
             <button class="mobile-menu__header" href="#">
@@ -244,6 +243,9 @@
       </main>
 
       <div class="feedback-menu">
+        <button class="feedback__close">
+          <img src="IMG2/close.png" alt="" />
+        </button>
         <h2 class="feedback__title">Обратная связь</h2>
         <form class="feedback__form" action="#" method="post">
           <div class="feedback__field">
@@ -297,6 +299,24 @@
               <img src="IMG2/отправить.png" alt="" />
             </button>
           </div>
+        </form>
+      </div>
+      <div class="callback">
+        <button class="callback__close">
+          <img src="IMG2/close.png" alt="" />
+        </button>
+        <h2 class="callback__title">Заказать звонок</h2>
+        <form class="callback__form" action="">
+          <input type="tel" class="callback__input" placeholder="Телефон" />
+          <p class="callback__note">
+            Нажимая «отправить», вы даёте согласие на
+            <span class="callback__link"> обработку персональных данных</span>
+            и соглашаетесь с нашей
+            <span class="callback__link"> политикой конфиденциальности</span>
+          </p>
+          <button class="callback__submit" type="submit">
+            <img src="IMG2/отправить.png" alt="" />
+          </button>
         </form>
       </div>
     </div>

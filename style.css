@@ -321,6 +321,8 @@ ul li:first-child p {
   font-size: 16px;
 }
 .feedback-menu {
+  position: fixed;
+  right: 0px;
   background-color: #ffffff;
   padding-left: 32px;
   min-width: 440px;
@@ -378,6 +380,69 @@ ul li:first-child p {
   border-radius: 2px;
   top: 50%;
   transform: translateY(-50%);
+}
+.feedback__close {
+  position: absolute;
+  top: 32px;
+  right: 473px;
+}
+.callback {
+  min-height: 100%;
+  position: fixed;
+  right: 0;
+  min-width: 440px;
+  background-color: #ffffff;
+  padding-left: 30px;
+}
+.callback__close {
+  position: absolute;
+  top: 32px;
+  right: 473px;
+}
+
+.callback__title {
+  margin-top: 40px;
+  font-size: 24px;
+  font-family: "TT Lakes";
+  font-weight: 700;
+  color: #1b1c21;
+  position: relative;
+}
+.callback__title::before {
+  content: "";
+  height: 40px;
+  width: 3px;
+  background-color: #41f6d7;
+  position: absolute;
+  left: -30px;
+  border-radius: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.callback__input {
+  padding-left: 16px;
+  margin-top: 24px;
+  width: 376px;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid#EAEAEA;
+}
+.callback__note {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #7e7e82;
+  width: 360px;
+  line-height: 16px;
+}
+
+.callback__link {
+  font-size: 16px;
+  color: #ff3e79;
+}
+
+.callback__submit {
+  padding-top: 16px;
+  padding-left: 242px;
 }
 
 @media (max-width: 768px) {
@@ -513,8 +578,22 @@ ul li:first-child p {
   .header__right-one,
   .header__right-two,
   .text-block__hidden-text,
-  .header__right-mod {
+  .header__right-mod,
+  .feedback-menu,
+  .mobile,
+  .hidden {
     display: none;
+  }
+  /* .feedback__close{
+    position: absolute;
+  } */
+  .feedback-menu {
+    position: absolute;
+    right: 0;
+  }
+  .feedback-menu.active,
+  .mobile.active {
+    display: block;
   }
   h2 {
     font-family: "TT Lakes";
@@ -636,8 +715,12 @@ ul li:first-child p {
 }
 
 @media (min-width: 1120px) {
+  
+  .hidden,
   .feedback-menu {
     display: none;
+        min-height: 100%;
+
   }
   .feedback-menu.active {
     display: block;
@@ -761,4 +844,10 @@ ul li:first-child p {
   .mobile-menu > :nth-child(2) {
     padding-left: 0px;
   }
+}
+.callback {
+  display: none;
+}
+.callback.active {
+  display: block;
 }
