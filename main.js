@@ -8,12 +8,12 @@ const oppenMessageBtn = document.querySelector(".message");
 const closeBtnClose = document.querySelector(".btn-close");
 const closeFeedbackBtn = document.querySelector(".close-feedback");
 const callbackCloseBtn = document.querySelector(".callback__close");
-const feedbackCloseBtn = document.querySelector("feedback__close");
+const feedbackCloseBtn = document.querySelector(".feedback__close");
 const feedbackMenu = document.querySelector(".feedback-menu");
 const mobileMenu = document.querySelector(".mobile");
 const mobileContent = document.querySelector(".content");
 const callbackMenu = document.querySelector(".callback");
-const mobileActiveHidden = document.querySelector(".mobile active");
+const mobileActiveHidden = document.querySelector(".mobile");
 let isExpanded = false;
 
 // button.addEventListener("click", function () {});
@@ -49,7 +49,7 @@ function getVisibleCount() {
   if (width < 768) return items.length;
   const containerWidth = container.offsetWidth;
   const itemsWidth = items[0].offsetWidth;
-  const countItems = Math.trunc(containerWidth / (itemsWidth + 25));
+  const countItems = Math.trunc(containerWidth / (itemsWidth + 28));
 
   return countItems * 2;
 }
@@ -96,10 +96,9 @@ window.addEventListener("resize", () => {
 });
 
 oppenMessageBtn.addEventListener("click", () => {
-  console.log("click");
-  callbackMenu.classList.add("active");
+  feedbackMenu.classList.add("active");
   mobileContent.classList.add("hidden");
-  mobileMenu.classList.add("hidden");
+  mobileMenu.classList.remove("active");
 });
 
 openheaderMenuBtn.addEventListener("click", () => {
@@ -108,12 +107,12 @@ openheaderMenuBtn.addEventListener("click", () => {
   mobileContent.classList.add("hidden");
 });
 
-oppenMessageBtn.addEventListener("click", () => {
-  if (mobileMenu.classList.contains("active")) {
-    mobileMenu.classList.add("hidden");
-    mobileContent.classList.add("hidden");
-  }
-});
+// oppenMessageBtn.addEventListener("click", () => {
+//   if (mobileMenu.classList.contains("active")) {
+//     mobileMenu.classList.add("hidden");
+//     mobileContent.classList.add("hidden");
+//   }
+// });
 
 closeBtnClose.addEventListener("click", () => {
   mobileMenu.classList.remove("active");
@@ -124,20 +123,21 @@ openFeedbackBtn.addEventListener("click", () => {
   callbackMenu.classList.add("active");
   mobileContent.classList.add("hidden");
   mobileMenu.classList.add("hidden");
-  // mobileActive.classList.add("hidden");
+  mobileActiveHidden.classList.remove("active");
 });
 
 callbackCloseBtn.addEventListener("click", () => {
+  console.log("роиол");
   callbackMenu.classList.remove("active");
   mobileMenu.classList.remove("hidden");
   mobileContent.classList.remove("hidden");
 });
 
 feedbackCloseBtn.addEventListener("click", () => {
-  // callbackMenu.classList.remove("active");
-  // mobileMenu.classList.remove("hidden");
-  // mobileContent.classList.remove("hidden");
-  mobileMenu.classList.add("hidden");
+  console.log("ддь");
+  feedbackMenu.classList.remove("active");
+  mobileMenu.classList.remove("hidden");
+  mobileContent.classList.remove("hidden");
 });
 
 // if (window.innerWidth < 768) {
