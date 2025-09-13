@@ -14,6 +14,7 @@ const mobileMenu = document.querySelector(".mobile");
 const mobileContent = document.querySelector(".content");
 const callbackMenu = document.querySelector(".callback");
 const mobileActiveHidden = document.querySelector(".mobile");
+const asPhone = document.querySelector(".phone");
 let isExpanded = false;
 
 // button.addEventListener("click", function () {});
@@ -98,6 +99,7 @@ window.addEventListener("resize", () => {
 oppenMessageBtn.addEventListener("click", () => {
   feedbackMenu.classList.add("active");
   mobileContent.classList.add("hidden");
+  mobileMenu.classList.add("hidden");
   mobileMenu.classList.remove("active");
 });
 
@@ -124,6 +126,10 @@ openFeedbackBtn.addEventListener("click", () => {
   mobileContent.classList.add("hidden");
   mobileMenu.classList.add("hidden");
   mobileActiveHidden.classList.remove("active");
+});
+
+asPhone.addEventListener("click", () => {
+  callbackMenu.classList.add("active");
 });
 
 callbackCloseBtn.addEventListener("click", () => {

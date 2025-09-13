@@ -105,7 +105,7 @@ h6 {
 .header__menu,
 .header__search,
 .header__settings,
-.header__center-item {
+.header__center-item{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -446,6 +446,9 @@ ul li:first-child p {
 }
 
 @media (max-width: 768px) {
+  .feedback__title::before {
+    left: -16px;
+  }
   .callback {
     position: relative;
     padding-top: 64px;
@@ -609,6 +612,7 @@ ul li:first-child p {
   .feedback-menu {
     position: absolute;
     right: 0;
+    min-height: 100%;
   }
   .feedback-menu.active,
   .mobile.active {
@@ -860,6 +864,9 @@ ul li:first-child p {
   }
   .mobile-menu > :nth-child(2) {
     padding-left: 0px;
+  }
+  .callback__title::before {
+    left: -30px;
   }
 }
 .callback {
