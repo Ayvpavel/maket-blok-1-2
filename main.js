@@ -116,7 +116,7 @@ openheaderMenuBtn.addEventListener("click", () => {
 
 closeBtnClose.addEventListener("click", () => {
   mobileMenu.classList.remove("active");
-  mobileContent.classList.add("active");
+  mobileContent.classList.remove("hidden");
 });
 
 openFeedbackBtn.addEventListener("click", () => {

@@ -414,7 +414,7 @@ ul li:first-child p {
   width: 3px;
   background-color: #41f6d7;
   position: absolute;
-  left: -30px;
+  left: -16px;
   border-radius: 2px;
   top: 50%;
   transform: translateY(-50%);
@@ -447,13 +447,14 @@ ul li:first-child p {
 
 @media (max-width: 768px) {
   .callback {
-    padding-top: 104px;
-    position: fixed;
+    position: relative;
+    padding-top: 64px;
+    padding-left: 16px;
   }
   .callback__close {
     position: fixed;
     top: 24px;
-    left: - 16px;
+    left: 16px;
   }
   .hidden {
     display: none;
@@ -471,11 +472,10 @@ ul li:first-child p {
     padding-top: 64px;
     padding-left: 16px;
   }
-  .feedback__close{
+  .feedback__close {
     position: fixed;
     left: 16px;
     top: 24px;
-    
   }
   .feedback-menu.active {
     display: block;
