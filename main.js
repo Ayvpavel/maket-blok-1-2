@@ -2,9 +2,9 @@ const button = document.querySelector(".gallery__show-all");
 const container = document.querySelector(".swiper-wrapper");
 const items = container.querySelectorAll(".swiper-slide");
 const icon = document.querySelector(".gallery-icon");
-const openFeedbackBtn = document.querySelector(".phone");
+const openFeedbackBtn = document.querySelectorAll(".phone");
 const openheaderMenuBtn = document.querySelector(".header__menu");
-const oppenMessageBtn = document.querySelector(".message");
+const oppenMessageBtn = document.querySelectorAll(".message");
 const closeBtnClose = document.querySelector(".btn-close");
 const closeFeedbackBtn = document.querySelector(".close-feedback");
 const callbackCloseBtn = document.querySelector(".callback__close");
@@ -14,7 +14,7 @@ const mobileMenu = document.querySelector(".mobile");
 const mobileContent = document.querySelector(".content");
 const callbackMenu = document.querySelector(".callback");
 const mobileActiveHidden = document.querySelector(".mobile");
-const asPhone = document.querySelector(".phone");
+// const asPhone = document.querySelector(".phone");
 let isExpanded = false;
 
 // button.addEventListener("click", function () {});
@@ -96,12 +96,23 @@ window.addEventListener("resize", () => {
   initSwiper();
 });
 
-oppenMessageBtn.addEventListener("click", () => {
-  feedbackMenu.classList.add("active");
-  mobileContent.classList.add("hidden");
-  mobileMenu.classList.add("hidden");
-  mobileMenu.classList.remove("active");
-});
+// oppenMessageBtn.addEventListener("click", () => {
+//   feedbackMenu.classList.add("active");
+//   mobileContent.classList.add("hidden");
+//   mobileMenu.classList.add("hidden");
+//   mobileMenu.classList.remove("active");
+// });
+
+for (let i = 0; i < oppenMessageBtn.length; i++) {
+  const Element = oppenMessageBtn[i];
+  console.log(Element);
+  Element.addEventListener("click", () => {
+    feedbackMenu.classList.add("active");
+    mobileContent.classList.add("hidden");
+    mobileMenu.classList.add("hidden");
+    mobileMenu.classList.remove("active");
+  });
+}
 
 openheaderMenuBtn.addEventListener("click", () => {
   mobileMenu.classList.add("active");
@@ -121,19 +132,18 @@ closeBtnClose.addEventListener("click", () => {
   mobileContent.classList.remove("hidden");
 });
 
-openFeedbackBtn.addEventListener("click", () => {
-  callbackMenu.classList.add("active");
-  mobileContent.classList.add("hidden");
-  mobileMenu.classList.add("hidden");
-  mobileActiveHidden.classList.remove("active");
-});
+// openFeedbackBtn.addEventListener("click", () => {
+//   callbackMenu.classList.add("active");
+//   mobileContent.classList.add("hidden");
+//   mobileMenu.classList.add("hidden");
+//   mobileActiveHidden.classList.remove("active");
+// });
 
-asPhone.addEventListener("click", () => {
-  callbackMenu.classList.add("active");
-});
+// asPhone.addEventListener("click", () => {
+//   callbackMenu.classList.add("active");
+// });
 
 callbackCloseBtn.addEventListener("click", () => {
-  console.log("роиол");
   callbackMenu.classList.remove("active");
   mobileMenu.classList.remove("hidden");
   mobileContent.classList.remove("hidden");
@@ -173,3 +183,13 @@ feedbackCloseBtn.addEventListener("click", () => {
 //     mobileContent.classList.remove("hidden");
 //   });
 // }
+console.log(openFeedbackBtn);
+for (let i = 0; i < openFeedbackBtn.length; i++) {
+  const Element = openFeedbackBtn[i];
+  console.log(Element);
+  Element.addEventListener("click", () => {
+    callbackMenu.classList.add("active");
+    mobileContent.classList.add("hidden");
+    mobileMenu.classList.add("hidden");
+  });
+}
