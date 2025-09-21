@@ -1,6 +1,14 @@
+import "../../node_modules/focus-visible/dist/focus-visible";
+import "../scss/main.scss";
+import "../index.html";
+import arrowIcon from "../img/arrow.png";
+import defaultIcon from "../img/icon.png";
+console.log(arrowIcon);
 const button = document.querySelector(".gallery__show-all");
 const container = document.querySelector(".swiper-wrapper");
 const items = container.querySelectorAll(".swiper-slide");
+const container2 = document.querySelector(".swiper-wrapper");
+const items2 = container2.querySelectorAll(".swiper-slide");
 const icon = document.querySelector(".gallery-icon");
 const openFeedbackBtn = document.querySelectorAll(".phone");
 const openheaderMenuBtn = document.querySelector(".header__menu");
@@ -19,29 +27,40 @@ let isExpanded = false;
 
 // button.addEventListener("click", function () {});
 
-let swiperElement = null;
+// let swiperElement = null;
+const swiperInstances = [];
 
 function initSwiper() {
-  const swiperEl = document.querySelector(".swiper");
+  const swiperList = document.querySelectorAll(".swiper");
 
-  if (!swiperEl) return;
+  if (swiperList.length === 0) return;
 
-  if (window.innerWidth < 768 && !swiperElement) {
-    swiperElement = new Swiper(swiperEl, {
-      direction: "horizontal",
-      loop: true,
-      speed: 300,
-      slidesPerView: "auto",
-      spaceBetween: 16,
-      centeredSlides: false,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-  } else if (window.innerWidth >= 768 && swiperElement) {
-    swiperElement.destroy(true, true);
-    swiperElement = null;
+  if (window.innerWidth < 768) {
+    for (let i = 0; i < swiperList.length; i++) {
+      const swiperEl = swiperList[i];
+
+      if (!swiperInstances[i]) {
+        swiperInstances[i] = new Swiper(swiperEl, {
+          direction: "horizontal",
+          loop: true,
+          speed: 300,
+          slidesPerView: "auto",
+          spaceBetween: 16,
+          centeredSlides: false,
+          pagination: {
+            el: swiperEl.querySelector(".swiper-pagination"), // фикс
+            clickable: true,
+          },
+        });
+      }
+    }
+  } else {
+    for (let i = 0; i < swiperInstances.length; i++) {
+      if (swiperInstances[i]) {
+        swiperInstances[i].destroy(true, true);
+        swiperInstances[i] = null;
+      }
+    }
   }
 }
 
@@ -61,7 +80,7 @@ function start() {
 }
 
 function updateVisibility() {
-  if (swiperElement) return;
+  // if (swiperElement) return;
   const count = getVisibleCount();
   for (let index = 0; index < items.length; index++) {
     const item = items[index];
@@ -74,10 +93,10 @@ function updateVisibility() {
   }
   if (isExpanded) {
     button.textContent = "Скрыть";
-    icon.src = "IMG2/стрел2.png";
+    icon.src = arrowIcon;
   } else {
     button.textContent = "Показать все";
-    icon.src = "IMG2/icon1.png";
+    icon.src = defaultIcon;
   }
 }
 
@@ -88,12 +107,16 @@ button.addEventListener("click", function () {
 
 document.addEventListener("DOMContentLoaded", () => {
   updateVisibility();
-  initSwiper();
+  initSwiper(".brands-slider");
+
+  initSwiper(".swiper");
 });
 
 window.addEventListener("resize", () => {
   updateVisibility();
-  initSwiper();
+  initSwiper(".brands-slider");
+
+  initSwiper(".swiper");
 });
 
 // oppenMessageBtn.addEventListener("click", () => {
@@ -183,13 +206,13 @@ feedbackCloseBtn.addEventListener("click", () => {
 //     mobileContent.classList.remove("hidden");
 //   });
 // }
-console.log(openFeedbackBtn);
 for (let i = 0; i < openFeedbackBtn.length; i++) {
   const Element = openFeedbackBtn[i];
   console.log(Element);
   Element.addEventListener("click", () => {
     callbackMenu.classList.add("active");
     mobileContent.classList.add("hidden");
+    mobileMenu.classList.remove("active");
     mobileMenu.classList.add("hidden");
   });
 }
