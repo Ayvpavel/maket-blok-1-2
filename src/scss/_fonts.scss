@@ -1,16 +1,4 @@
 @font-face {
-  font-family: "TTL";
-  src: url("../fonts/TTLakesBlack.woff");
-  font-weight: 900;
-}
-
-@font-face {
-  font-family: "TTLa";
-  src: url("../fonts/TTLakesBold.woff");
-  font-weight: 700;
-}
-
-@font-face {
   font-family: "TTLreg";
   src: url("../fonts/TTLakesRegular.woff");
   font-weight: 400;
@@ -19,4 +7,15 @@
   font-family: "TTLmed";
   src: url("../fonts/TTLakes-Medium.woff");
   font-weight: 500;
+}
+@font-face {
+  font-family: "TTLa";
+  src: url("../fonts/TTLakesBold.woff");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "TTL";
+  src: url("../fonts/TTLakesBlack.woff");
+  font-weight: 900;
 }

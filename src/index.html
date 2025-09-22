@@ -16,16 +16,20 @@
       <div class="mobile">
         <div class="mobile-menu__inner">
           <header class="mobile-menu">
-            <button class="mobile-menu__header btn-close" href="#">
+            <button class="mobile-menu__btn-close" href="#">
               <img src="IMG2/ICONE.png" alt="Закрыть меню" />
             </button>
-            <img src="img/Group.png" alt="иконка" />
+            <img class="mobile-menu__logo" src="img/Group.png" alt="Логотип" />
             <button class="mobile-menu__header" href="#">
               <img src="IMG2/iconlupa.png" alt="Поиск" />
             </button>
           </header>
           <ul class="mobile-menu__nav">
-            <li><a class="mobile-menu__activ" href="#">Ремонт техники</a></li>
+            <li>
+              <a class="mobile-menu__link mobile-menu__link--active" href="#"
+                >Ремонт техники</a
+              >
+            </li>
             <li><a href="#">Услуги и сервисы</a></li>
             <li><a href="#">Корпоративным клиентам</a></li>
             <li><a href="#">Продавцам техники</a></li>
@@ -165,81 +169,101 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <img
-                  id="brands__icon"
+                  class="brands__icon"
                   src="IMG2/brends/lenovoorig.png"
+                  alt="Lenovo"
+                />
+                <img src="IMG2/brends/go.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="brands__icon"
+                  src="IMG2/brends/samsung.png"
                   alt=""
                 />
                 <img src="IMG2/brends/go.png" alt="" />
               </div>
               <div class="swiper-slide">
-                <img id="brands__icon" src="IMG2/brends/samsung.png" alt="" />
-                <img src="IMG2/brends/go.png" alt="" />
-              </div>
-              <div class="swiper-slide">
-                <img id="brands__icon" src="IMG2/brends/apple.png" alt="" />
+                <img class="brands__icon" src="IMG2/brends/apple.png" alt="" />
 
                 <img src="IMG2/brends/go.png" alt="" />
               </div>
               <div class="swiper-slide">
-                <img id="brands__icon" src="IMG2/brends/viewsonic.png" alt="" />
+                <img
+                  class="brands__icon"
+                  src="IMG2/brends/viewsonic.png"
+                  alt=""
+                />
                 <img src="IMG2/brends/go.png" alt="" />
               </div>
               <div class="swiper-slide">
-                <img id="brands__icon" src="IMG2/brends/bosch.png" alt="" />
+                <img class="brands__icon" src="IMG2/brends/bosch.png" alt="" />
                 <img src="IMG2/brends/go.png" alt="" />
               </div>
               <div class="swiper-slide">
-                <img id="brands__icon" src="IMG2/brends/hp.png" alt="" />
-
-                <div class="brands__arrow">
-                  <img src="IMG2/brends/go.png" alt="" />
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <img id="brands__icon" src="IMG2/brends/acer.png" alt="" />
+                <img class="brands__icon" src="IMG2/brends/hp.png" alt="" />
 
                 <div class="brands__arrow">
                   <img src="IMG2/brends/go.png" alt="" />
                 </div>
               </div>
               <div class="swiper-slide">
-                <img id="brands__icon" src="IMG2/brends/sony.svg" alt="" />
+                <img class="brands__icon" src="IMG2/brends/acer.png" alt="" />
+
                 <div class="brands__arrow">
                   <img src="IMG2/brends/go.png" alt="" />
                 </div>
               </div>
               <div class="swiper-slide">
-                <img id="brands__icon" src="IMG2/brends/viewsonic.png" alt="" />
+                <img class="brands__icon" src="IMG2/brends/sony.svg" alt="" />
                 <div class="brands__arrow">
                   <img src="IMG2/brends/go.png" alt="" />
                 </div>
               </div>
               <div class="swiper-slide">
-                <img id="brands__icon" src="IMG2/brends/hp.png" alt="" />
+                <img
+                  class="brands__icon"
+                  src="IMG2/brends/viewsonic.png"
+                  alt=""
+                />
                 <div class="brands__arrow">
                   <img src="IMG2/brends/go.png" alt="" />
                 </div>
               </div>
               <div class="swiper-slide">
-                <img id="brands__icon" src="IMG2/brends/sony.svg" alt="" />
+                <img class="brands__icon" src="IMG2/brends/hp.png" alt="" />
                 <div class="brands__arrow">
                   <img src="IMG2/brends/go.png" alt="" />
                 </div>
               </div>
               <div class="swiper-slide">
-                <img id="brands__icon" src="IMG2/brends/viewsonic.png" alt="" />
+                <img class="brands__icon" src="IMG2/brends/sony.svg" alt="" />
                 <div class="brands__arrow">
                   <img src="IMG2/brends/go.png" alt="" />
                 </div>
               </div>
               <div class="swiper-slide">
-                <img id="brands__icon" src="IMG2/brends/bosch.png" alt="" />
+                <img
+                  class="brands__icon"
+                  src="IMG2/brends/viewsonic.png"
+                  alt=""
+                />
                 <div class="brands__arrow">
                   <img src="IMG2/brends/go.png" alt="" />
                 </div>
               </div>
               <div class="swiper-slide">
-                <img id="brands__icon" src="IMG2/brends/viewsonic.png" alt="" />
+                <img class="brands__icon" src="IMG2/brends/bosch.png" alt="" />
+                <div class="brands__arrow">
+                  <img src="IMG2/brends/go.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="brands__icon"
+                  src="IMG2/brends/viewsonic.png"
+                  alt=""
+                />
                 <div class="brands__arrow">
                   <img src="IMG2/brends/go.png" alt="" />
                 </div>
@@ -257,7 +281,7 @@
             <div class="swiper-pagination"></div>
           </div>
           <div class="gallery">
-            <img class="gallery-icon"  alt="" />
+            <img class="gallery-icon" alt="" />
             <button class="gallery__show-all">Показать все</button>
           </div>
         </section>
@@ -266,21 +290,37 @@
 
           <div class="swiper brands-slider2">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <p>Ремонт ноутбуков</p>
-                <img src="IMG2/brends/go.png" alt />
+              <div class="swiper-slide brands-slider2__card">
+                <p class="brands-slider2__title">Ремонт ноутбуков</p>
+                <img
+                  class="brands-slider2__icon"
+                  src="IMG2/brends/go.png"
+                  alt
+                />
               </div>
-              <div class="swiper-slide">
-                <p>Ремонт планшетов</p>
-                <img src="IMG2/brends/go.png" alt />
+              <div class="swiper-slide brands-slider2__card">
+                <p class="brands-slider2__title">Ремонт планшетов</p>
+                <img
+                  class="brands-slider2__icon"
+                  src="IMG2/brends/go.png"
+                  alt
+                />
               </div>
-              <div class="swiper-slide">
-                <p>Ремонт ПК</p>
-                <img src="IMG2/brends/go.png" alt />
+              <div class="swiper-slide brands-slider2__card">
+                <p class="brands-slider2__title">Ремонт ПК</p>
+                <img
+                  class="brands-slider2__icon"
+                  src="IMG2/brends/go.png"
+                  alt
+                />
               </div>
-              <div class="swiper-slide">
-                <p>Ремонт мониторов</p>
-                <img src="IMG2/brends/go.png" alt />
+              <div class="swiper-slide brands-slider2__card">
+                <p class="brands-slider2__title">Ремонт мониторов</p>
+                <img
+                  class="brands-slider2__icon"
+                  src="IMG2/brends/go.png"
+                  alt
+                />
               </div>
             </div>
             <div class="swiper-pagination"></div>
@@ -297,7 +337,9 @@
           <table class="price-table">
             <thead class="price-table">
               <tr class="price-table2">
-                <th class="service-col">Ремонтные услуги</th>
+                <th class="prices-services__col prices-services__col--service">
+                  Ремонтные услуги
+                </th>
                 <th class="price-col">Цена</th>
                 <th class="time-col">Срок</th>
                 <th class="action-col">Действие</th>
@@ -358,17 +400,87 @@
               </tr>
             </tbody>
           </table>
-          <div class="price-note">
-            <p class="price-note__text">
-              Все цены указаны с учетом НДС. Стоимость ремонта указана на
-              единичную услугу. Для получения коммерческого предложения на
-              постоянное обслуживание, оставьте заявку.
-            </p>
-            <button class="price-note__button">
-              Получить коммерческое предложение
-            </button>
+        </section>
+        <section class="prices-slider">
+          <h2 class="prices-slider__title">Цены на услуги</h2>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide prices-slider__card">
+                <h3 class="prices-slider__service">Ремонтные услуги</h3>
+                <p class="prices-slider__desc">
+                  Тестирование с выдачей технического заключения
+                </p>
+                <p class="prices-slider__label">Цена</p>
+                <p class="prices-slider__value">Бесплатно</p>
+                <p class="prices-slider__label">Срок</p>
+                <p class="prices-slider__value">30–120 мин</p>
+                <button class="prices-slider__btn">
+                  <img src="IMG2/кнопка заказать.png" alt="" />
+                </button>
+              </div>
+              <div class="swiper-slide prices-slider__card">
+                <h3 class="prices-slider__service">Ремонтные услуги</h3>
+                <p class="prices-slider__desc">Диагностика</p>
+                <p class="prices-slider__label">Цена</p>
+                <p class="prices-slider__value">1 000 ₽</p>
+                <p class="prices-slider__label">Срок</p>
+                <p class="prices-slider__value">30–120 мин</p>
+                <button class="prices-slider__btn">
+                  <img src="IMG2/кнопка заказать.png" alt="" />
+                </button>
+              </div>
+              <div class="swiper-slide prices-slider__card">
+                <h3 class="prices-slider__service">Ремонтные услуги</h3>
+                <p class="prices-slider__desc">Замена дисплея</p>
+                <p class="prices-slider__label">Цена</p>
+                <p class="prices-slider__value">1 000 ₽</p>
+                <p class="prices-slider__label">Срок</p>
+                <p class="prices-slider__value">30–120 мин</p>
+                <button class="prices-slider__btn">
+                  <img src="IMG2/кнопка заказать.png" alt="" />
+                </button>
+              </div>
+              <div class="swiper-slide prices-slider__card">
+                <h3 class="prices-slider__service">Ремонтные услуги</h3>
+                <p class="prices-slider__desc">
+                  Замена полифонического динамика
+                </p>
+                <p class="prices-slider__label">Цена</p>
+                <p class="prices-slider__value">1 000 ₽</p>
+                <p class="prices-slider__label">Срок</p>
+                <p class="prices-slider__value">30–120 мин</p>
+                <button class="prices-slider__btn">
+                  <img src="IMG2/кнопка заказать.png" alt="" />
+                </button>
+              </div>
+              <div class="swiper-slide prices-slider__card">
+                <h3 class="prices-slider__service">Ремонтные услуги</h3>
+                <p class="prices-slider__desc">
+                  Замена программного обеспечения
+                </p>
+                <p class="prices-slider__label">Цена</p>
+                <p class="prices-slider__value">1 000 ₽</p>
+                <p class="prices-slider__label">Срок</p>
+                <p class="prices-slider__value">30–120 мин</p>
+                <button class="prices-slider__btn">
+                  <img src="IMG2/кнопка заказать.png" alt="" />
+                </button>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
         </section>
+        <div class="price-note">
+          <p class="price-note__text">
+            Все цены указаны с учетом НДС. Стоимость ремонта указана на
+            единичную услугу. Для получения коммерческого предложения на
+            постоянное обслуживание, оставьте заявку.
+          </p>
+          <button class="price-note__button">
+            Получить коммерческое предложение
+          </button>
+        </div>
+
         <footer class="footer">
           <div class="footer__copyright">
             © 2019 CPS <br />

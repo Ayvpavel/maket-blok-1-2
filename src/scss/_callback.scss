@@ -1,0 +1,80 @@
+// .callback {
+//   min-height: 100%;
+//   position: fixed;
+//   right: 0;
+//   min-width: 440px;
+//   background-color: #ffffff;
+//   padding-left: 30px;
+// }
+// .callback__close {
+//   position: absolute;
+//   top: 32px;
+//   right: 473px;
+// }
+
+// .callback__title {
+//   margin-top: 40px;
+//   font-size: 24px;
+//   font-family: "TT Lakes";
+//   font-weight: 700;
+//   color: #1b1c21;
+//   position: relative;
+// }
+// .callback__title::before {
+//   content: "";
+//   height: 40px;
+//   width: 3px;
+//   background-color: #41f6d7;
+//   position: absolute;
+//   left: -16px;
+//   border-radius: 2px;
+//   top: 50%;
+//   transform: translateY(-50%);
+// }
+// .callback__input {
+//   padding-left: 16px;
+//   margin-top: 24px;
+//   width: 376px;
+//   height: 48px;
+//   border-radius: 8px;
+//   border: 1px solid#EAEAEA;
+// }
+// .callback__note {
+//   margin-top: 16px;
+//   font-size: 14px;
+//   color: #7e7e82;
+//   width: 360px;
+//   line-height: 16px;
+// }
+
+// .callback__link {
+//   font-size: 16px;
+//   color: $fuk;
+// }
+
+// .callback__submit {
+//   padding-top: 16px;
+//   padding-left: 242px;
+// }
+
+// @media (max-width: 768px) {
+//   .callback {
+//     position: relative;
+//     padding-top: 64px;
+//     padding-left: 16px;
+//   }
+//   .callback__close {
+//     position: fixed;
+//     top: 24px;
+//     left: 16px;
+//   }
+// }
+
+// @media (min-width: 1120px) {
+//   .callback {
+//     display: none;
+//   }
+//   .callback.active {
+//     display: block;
+//   }
+// }

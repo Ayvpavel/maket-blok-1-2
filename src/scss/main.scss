@@ -4,6 +4,12 @@
 @import "vars";
 @import "settings";
 @import "swiper";
+@import "footer";
+@import "feedback-menu";
+@import "header";
+// @import "callback";
+
+
 * {
   padding: 0;
   margin: 0;
@@ -84,12 +90,7 @@ h5,
 h6 {
   font-weight: 400;
 }
-/* .brands__arrow {
-  width: 40px;
-  height: 40px;
-  border: 2px solid #ff3e79;
-  border-radius: 50%;
-} */
+
 
 .content {
   width: 100%;
@@ -107,10 +108,7 @@ h6 {
   background-color: $fuk;
   overflow: hidden;
 }
-.header {
-  display: flex;
-  align-items: center;
-}
+
 .services__tabs {
   display: flex;
   column-gap: 16px;
@@ -219,11 +217,11 @@ body {
   margin-left: 78px;
 }
 
-.mobile-menu__header {
+.mobile-menu__btn-close {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ff3e79;
+  background-color: $fuk;
   height: 40px;
   width: 40px;
   border-radius: 50%;
@@ -315,14 +313,7 @@ ul li:first-child p {
   font-family: "TT Lakes";
   font-size: 16px;
 }
-.feedback-menu {
-  position: fixed;
-  right: 0px;
-  background-color: #ffffff;
-  padding-left: 32px;
-  min-width: 440px;
-  max-width: 440px;
-}
+
 .feedback__title {
   color: #1b1c21;
   font-size: 24px;
@@ -360,7 +351,7 @@ ul li:first-child p {
 }
 .feedback__highlight {
   font-size: 16px;
-  color: #ff3e79;
+  color: $fuk;
 }
 .feedback__title {
   position: relative;
@@ -432,7 +423,7 @@ ul li:first-child p {
 
 .callback__link {
   font-size: 16px;
-  color: #ff3e79;
+  color: $fuk;
 }
 
 .callback__submit {
@@ -453,12 +444,14 @@ ul li:first-child p {
   width: 240px;
   height: 160px;
 }
-.footer {
-  display: flex;
-  font-family: "TTLmed";
-  align-items: center;
-}
+
 @media (max-width: 768px) {
+  .prices-slider__card {
+    height: 200px !important;
+    width: 260px !important;
+    position: relative;
+  }
+
   .feedback__title::before {
     left: -16px;
   }
@@ -481,21 +474,13 @@ ul li:first-child p {
   .mobile.active {
     display: block;
   }
-  .feedback-menu {
-    display: none;
-    min-height: 100%;
-    position: relative;
-    padding-top: 64px;
-    padding-left: 16px;
-  }
+
   .feedback__close {
     position: fixed;
     left: 16px;
     top: 24px;
   }
-  .feedback-menu.active {
-    display: block;
-  }
+
   h2 {
     font-size: 16px;
     font-family: "TT Lakes";
@@ -572,14 +557,7 @@ ul li:first-child p {
     gap: 16px;
     align-items: center;
   }
-  .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 24px 16px;
-    width: 100%;
-    background: #ffffff;
-    border-bottom: 1px solid #d9fff5;
-  }
+
   .services__tabs {
     display: flex;
     overflow-x: auto;
@@ -595,7 +573,7 @@ ul li:first-child p {
   .header__right-two,
   .text-block__paragraph,
   .header__right-mod,
-  .price-table {
+  .prices-services {
     display: none;
   }
   .header__right {
@@ -607,26 +585,59 @@ ul li:first-child p {
     justify-content: center;
     gap: 20px;
   }
-  .footer {
-    padding-top: 16px;
-    flex-direction: column;
-    padding-left: 16px;
-    gap: 16px;
-    max-width: 320px;
-    text-align: center;
-    margin: 0 auto;
-  }
+
   .price-note {
-    width: 288px;
-    padding-top: 16px;
-  }
-  .prices-services {
     max-width: 250px;
     padding-left: 16px;
     margin: 0 auto;
+    width: 288px;
+    padding-top: 16px;
   }
+
   .price-note__text {
     font-size: 14px;
+  }
+  .prices-slider {
+    padding-left: 32px;
+    padding-top: 40px;
+  }
+  .prices-slider__title {
+    padding-bottom: 32px;
+  }
+  .prices-slider__card {
+    display: block;
+    line-height: 18px;
+  }
+  .prices-slider__label {
+    padding-top: 16px;
+  }
+  .prices-slider__service,
+  .prices-slider__label {
+    color: #7e7e82;
+    font-size: 14px;
+  }
+  .prices-slider__btn {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+  }
+  .brands-slider2__card {
+    width: 240px;
+    height: 160px;
+    display: flex;
+    flex-direction: row;
+  }
+  .brands-slider2__title {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    font-size: 16px;
+    font-family: "TTLmed";
+  }
+  .brands-slider2__icon {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
   }
 }
 
@@ -636,9 +647,9 @@ ul li:first-child p {
   .header__right-two,
   .text-block__hidden-text,
   .header__right-mod,
-  .feedback-menu,
   .mobile,
-  .hidden {
+  .hidden,
+  .prices-slider {
     display: none;
   }
   .mobile-foot {
@@ -658,27 +669,17 @@ ul li:first-child p {
     height: auto;
     max-height: 100vh;
   }
-  .footer {
-    gap: 30px;
-    font-size: 14px;
-    color: #7e7e82;
-    line-height: 16px;
-    padding-left: 24px;
-    padding-bottom: 41px;
-    padding-top: 30px;
-  }
-  .price-note__text {
-    padding-top: 24px;
-    padding-left: 24px;
-  }
+
   .price-note__button {
     padding-top: 16px;
-    padding-left: 35px;
+    text-align: justify;
   }
   .footer__policy {
     padding-left: 49px;
   }
-
+  .price-note__text {
+    line-height: 24px;
+  }
   .footer__info {
     padding-left: 40px;
     text-align: end;
@@ -708,18 +709,12 @@ ul li:first-child p {
   .price-table2 {
   }
 
-  .feedback-menu {
-    position: absolute;
-    right: 0;
-    min-height: 100%;
-  }
-
   .prices-services__title {
     padding-bottom: 47px;
     height: 24px;
     font-size: 16px;
   }
-  .feedback-menu.active,
+
   .mobile.active {
     display: block;
   }
@@ -782,13 +777,7 @@ ul li:first-child p {
     display: flex;
     gap: 16px;
   }
-  .header {
-    justify-content: space-between;
-    padding: 20px 20px 20px 20px;
-    background: #ffffff;
-    border-bottom: 1px solid #d9fff5;
-    height: 88px;
-  }
+
   .services__tabs {
     display: flex;
     overflow-x: auto;
@@ -854,19 +843,28 @@ ul li:first-child p {
   .swiper {
     margin-left: 0px;
   }
+  .price-note {
+    height: 100px;
+    width: 421px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-family: "TT Lakes";
+    color: #1b1c21;
+    padding-left: 40px;
+    padding-top: 24px;
+    margin-bottom: 83px;
+  }
 }
 
 @media (min-width: 1120px) {
-  .feedback-menu,
-  .hidden {
+  .hidden,
+  .prices-slider {
     display: none;
     min-height: 100%;
   }
   .content.hidden {
     opacity: 0.096;
-    display: block;
-  }
-  .feedback-menu.active {
     display: block;
   }
 
@@ -883,8 +881,8 @@ ul li:first-child p {
     width: 50%;
   }
 
-  .header,
-  .btn-close {
+
+  .mobile-menu__btn-close {
     display: none;
   }
   .header__right-one {
@@ -1071,16 +1069,11 @@ ul li:first-child p {
     gap: 16px;
     font-family: "TT Lakes";
     color: #1b1c21;
+    padding-left: 32px;
+    padding-top: 32px;
     margin-bottom: 83px;
   }
-  .footer {
-    gap: 30px;
-    font-size: 14px;
-    color: #7e7e82;
-    line-height: 16px;
-    padding-left: 31px;
-    padding-bottom: 21px;
-  }
+
   .footer__policy {
     padding-left: 145px;
     margin-top: auto;

@@ -1,0 +1,34 @@
+.footer {
+  display: flex;
+  font-family: "TTLmed";
+  align-items: center;
+  color: #7e7e82;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 16px;
+    flex-direction: column;
+    padding-left: 16px;
+    gap: 16px;
+    max-width: 320px;
+    text-align: center;
+    margin: 0 auto;
+    gap: 30px;
+    font-size: 14px;
+    line-height: 16px;
+    padding-left: 24px;
+    padding-bottom: 41px;
+    padding-top: 30px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .footer {
+    gap: 30px;
+    font-size: 14px;
+    line-height: 16px;
+    padding-left: 31px;
+    padding-bottom: 21px;
+  }
+}
