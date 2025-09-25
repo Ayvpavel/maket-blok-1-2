@@ -94,6 +94,9 @@
 }
 
 @media (max-width: 768px) {
+  .mobile-menu__inner {
+    gap: 32px;
+  }
   .mobile-menu__nav {
     row-gap: 24px;
   }
@@ -128,7 +131,7 @@
     flex-direction: column;
     padding-left: 24px;
     gap: 16px;
-    padding-bottom: 20px;
+    padding-bottom: 20px;   
   }
 
   .mobile-menu {
@@ -147,6 +150,9 @@
 }
 
 @media (min-width: 1120px) {
+  .mobile-menu__inner {
+    position: fixed;
+  }
   .mobile-menu__services {
     color: #7e7e82 !important;
   }

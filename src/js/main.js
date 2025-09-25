@@ -3,7 +3,6 @@ import "../scss/main.scss";
 import "../index.html";
 import arrowIcon from "../img/arrow.png";
 import defaultIcon from "../img/icon.png";
-console.log(arrowIcon);
 const button = document.querySelector(".gallery__show-all");
 const container = document.querySelector(".swiper-wrapper");
 const items = container.querySelectorAll(".swiper-slide");
@@ -22,6 +21,8 @@ const mobileMenu = document.querySelector(".mobile");
 const mobileContent = document.querySelector(".content");
 const callbackMenu = document.querySelector(".callback");
 const mobileActiveHidden = document.querySelector(".mobile");
+const overlay = document.querySelector(".overlay");
+
 // const asPhone = document.querySelector(".phone");
 let isExpanded = false;
 
@@ -119,100 +120,74 @@ window.addEventListener("resize", () => {
   initSwiper(".swiper");
 });
 
-// oppenMessageBtn.addEventListener("click", () => {
-//   feedbackMenu.classList.add("active");
-//   mobileContent.classList.add("hidden");
-//   mobileMenu.classList.add("hidden");
-//   mobileMenu.classList.remove("active");
-// });
-
 for (let i = 0; i < oppenMessageBtn.length; i++) {
   const Element = oppenMessageBtn[i];
-  console.log(Element);
   Element.addEventListener("click", () => {
     feedbackMenu.classList.add("active");
     mobileContent.classList.add("hidden");
     mobileMenu.classList.add("hidden");
     mobileMenu.classList.remove("active");
+    document.body.style.overflow = "hidden";
+    overlay.classList.add("active");
   });
 }
 
 openheaderMenuBtn.addEventListener("click", () => {
   mobileMenu.classList.add("active");
+  document.body.style.overflow = "hidden";
+  overlay.classList.add("active");
 
   mobileContent.classList.add("hidden");
 });
 
-// oppenMessageBtn.addEventListener("click", () => {
-//   if (mobileMenu.classList.contains("active")) {
-//     mobileMenu.classList.add("hidden");
-//     mobileContent.classList.add("hidden");
-//   }
-// });
-
 closeBtnClose.addEventListener("click", () => {
   mobileMenu.classList.remove("active");
   mobileContent.classList.remove("hidden");
+  document.body.style.overflow = "";
+  overlay.classList.remove("active");
 });
-
-// openFeedbackBtn.addEventListener("click", () => {
-//   callbackMenu.classList.add("active");
-//   mobileContent.classList.add("hidden");
-//   mobileMenu.classList.add("hidden");
-//   mobileActiveHidden.classList.remove("active");
-// });
-
-// asPhone.addEventListener("click", () => {
-//   callbackMenu.classList.add("active");
-// });
-
+overlay.addEventListener("click", () => {
+  mobileMenu.classList.remove("active");
+  mobileContent.classList.remove("hidden");
+  document.body.style.overflow = "";
+  overlay.classList.remove("active");
+});
 callbackCloseBtn.addEventListener("click", () => {
   callbackMenu.classList.remove("active");
   mobileMenu.classList.remove("hidden");
   mobileContent.classList.remove("hidden");
+  document.body.style.overflow = "";
+  overlay.classList.remove("active");
 });
-
-feedbackCloseBtn.addEventListener("click", () => {
-  console.log("ддь");
+overlay.addEventListener("click", () => {
+  callbackMenu.classList.remove("active");
+  mobileMenu.classList.remove("hidden");
+  mobileContent.classList.remove("hidden");
+  document.body.style.overflow = "";
+  overlay.classList.remove("active");
+});
+overlay.addEventListener("click", () => {
   feedbackMenu.classList.remove("active");
   mobileMenu.classList.remove("hidden");
   mobileContent.classList.remove("hidden");
+  document.body.style.overflow = "";
+  overlay.classList.remove("active");
 });
-
-// if (window.innerWidth < 768) {
-//   // Открыть мобильное меню
-//   openheaderMenuBtn.addEventListener("click", () => {
-//     mobileMenu.classList.add("active");
-//     mobileContent.classList.add("hidden");
-//   });
-
-//   // Если нажата кнопка обратной связи
-//   openFeedbackBtn.addEventListener("click", () => {
-//     mobileMenu.classList.remove("active");
-//     mobileContent.classList.add("hidden");
-//     feedbackMenu.classList.add("active");
-//   });
-
-//   // Если нажата кнопка "Заказать звонок"
-//   oppenMessageBtn.addEventListener("click", () => {
-//     mobileMenu.classList.remove("active");
-//     mobileContent.classList.add("hidden");
-//     callbackMenu.classList.add("active");
-//   });
-//   feedbackCloseBtn.addEventListener("click", () => {
-//     feedbackMenu.classList.remove("active");
-//     callbackMenu.classList.remove("active");
-//     mobileMenu.classList.remove("active");
-//     mobileContent.classList.remove("hidden");
-//   });
-// }
+feedbackCloseBtn.addEventListener("click", () => {
+  feedbackMenu.classList.remove("active");
+  mobileMenu.classList.remove("hidden");
+  mobileContent.classList.remove("hidden");
+  document.body.style.overflow = "";
+  overlay.classList.remove("active");
+});
 for (let i = 0; i < openFeedbackBtn.length; i++) {
   const Element = openFeedbackBtn[i];
-  console.log(Element);
   Element.addEventListener("click", () => {
     callbackMenu.classList.add("active");
     mobileContent.classList.add("hidden");
     mobileMenu.classList.remove("active");
     mobileMenu.classList.add("hidden");
+    document.body.style.overflow = "hidden";
+    overlay.classList.add("active");
   });
 }
