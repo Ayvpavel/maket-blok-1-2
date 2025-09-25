@@ -3,6 +3,10 @@
   font-family: "TTLmed";
   align-items: center;
   color: #7e7e82;
+  justify-content: space-between;
+}
+.footer__info {
+  max-width: 330px;
 }
 
 @media (max-width: 768px) {
@@ -23,6 +27,20 @@
   }
 }
 
+@media (min-width: 768px) and (max-width: 1120px) {
+  .footer {
+    padding-bottom: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 75px;
+  }
+   .footer__info {
+    text-align: end;
+    max-width: 213px
+  }
+
+}
+
 @media (min-width: 1120px) {
   .footer {
     gap: 30px;
@@ -31,4 +49,9 @@
     padding-left: 31px;
     padding-bottom: 21px;
   }
+  .footer__policy {
+    padding-left: 145px;
+    margin-top: auto;
+  }
+  
 }
